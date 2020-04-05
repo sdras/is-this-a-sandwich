@@ -3254,6 +3254,13 @@
       />
     </g>
     <g id="Information">
+      <image
+        x="479"
+        y="272"
+        :href="sandwichData[currentSandwichIndex].img"
+        height="1027"
+        width="1604"
+      />
       <path
         stroke-width="20"
         stroke="#ec008c"
@@ -3342,6 +3349,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.yes,
+.no {
+  cursor: pointer;
+}
+
 .cls-1 {
   fill: #71caca;
 }
