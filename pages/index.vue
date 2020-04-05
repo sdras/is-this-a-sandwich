@@ -1,6 +1,6 @@
 <template>
   <main>
-    <app-mainbk></app-mainbk>
+    <app-mainbk />
   </main>
 </template>
 
