@@ -112,7 +112,7 @@ export default {
       console.log(`Type: ${type}, Amt: ${posType}`);
       if (parseInt(posType, 10) < 0.75) {
         return `${type} purist`;
-      } else if (parseInt(posType, 10) > 1.25) {
+      } else if (parseInt(posType, 10) > 1.1) {
         return `${type} anarchist`;
       } else {
         return `${type} neutral`;
@@ -122,9 +122,15 @@ export default {
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
     medalPosition() {
+      const xUnit = 420;
+      const yUnit = 305;
+
+      const addUnits = (dir) =>
+        dir * this.finalPlayerPosition.ingredient + 1 + dir / 2;
+
       if (this.finalPlayerPosition.ingredient > 0) {
-        let xaxis = 420 * this.finalPlayerPosition.ingredient + 1;
-        let yaxis = 305 * (this.finalPlayerPosition.structure + 1) - 138;
+        let xaxis = addUnits(xUnit);
+        let yaxis = addUnits(yUnit) + 95;
         return xaxis + " " + yaxis;
       } else {
         return `150 320`;
