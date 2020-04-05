@@ -3325,7 +3325,11 @@ export default {
   },
   methods: {
     updateIndex() {
-      this.currentSandwichIndex += 1;
+      if (this.currentSandwichIndex < this.sandwichData.length - 1) {
+        this.currentSandwichIndex += 1;
+      } else {
+        this.$router.push("/score");
+      }
     },
     pickyes() {
       console.log("yes!");
@@ -3348,6 +3352,11 @@ export default {
 .yes,
 .no {
   cursor: pointer;
+  transition: 0.1s all ease;
+  &:hover {
+    transform: translateY(10px);
+    transition: 0.2s all ease;
+  }
 }
 
 .fullbleed {
@@ -3738,5 +3747,7 @@ export default {
   font-family: Sen-ExtraBold, Sen;
   font-weight: 800;
   fill: #9d1d58;
+  stroke: white;
+  stroke-width: 2;
 }
 </style>
