@@ -3332,7 +3332,6 @@ export default {
       }
     },
     pickyes() {
-      console.log("yes!");
       let score = {
         ingredient: this.sandwichData[this.currentSandwichIndex].ingredient,
         structure: this.sandwichData[this.currentSandwichIndex].structure,
@@ -3341,7 +3340,6 @@ export default {
       this.$store.commit("updatePlayerScore", score);
     },
     pickno() {
-      console.log("no!");
       let score = {
         ingredient: 1,
         structure: 1,

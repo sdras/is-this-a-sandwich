@@ -105,9 +105,9 @@ export default {
     awardAssignment(type) {
       let posType = this.finalPlayerPosition[type];
       console.log(`Type: ${type}, Amt: ${posType}`);
-      if (parseInt(posType, 10) < 0.75) {
+      if (posType < 1.1) {
         return `${type} purist`;
-      } else if (parseInt(posType, 10) > 1.25) {
+      } else if (posType > 1.5) {
         return `${type} anarchist`;
       } else {
         return `${type} neutral`;
@@ -117,11 +117,12 @@ export default {
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
     medalPosition() {
-      const xUnit = 420;
-      const yUnit = 455;
+      const xUnit = 630;
+      const yUnit = 456;
 
+      // TODO: scale of 0.5 to 2
       const addUnits = (dir) =>
-        dir * this.finalPlayerPosition.ingredient + dir / 2;
+        dir * this.finalPlayerPosition.ingredient - 1 + dir / 2;
 
       if (this.finalPlayerPosition.ingredient > 0) {
         let xaxis = addUnits(xUnit);
