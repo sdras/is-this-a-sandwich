@@ -6,14 +6,10 @@
 
 <script>
 import AppMainbk from "~/components/AppMainbk.vue";
-import { mapState } from "vuex";
 
 export default {
   components: {
     AppMainbk,
-  },
-  computed: {
-    ...mapState(["sandwichData"]),
   },
 };
 </script>

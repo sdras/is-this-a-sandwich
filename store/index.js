@@ -71,16 +71,16 @@ export const state = () => ({
       structure: 1,
     },
     {
-      name: "fondue",
-      img: "fondue.jpg",
-      ingredient: 1,
-      structure: 3,
-    },
-    {
       name: "sushiburrito",
       img: "sushiburrito.jpg",
       ingredient: 3,
       structure: 2.5,
+    },
+    {
+      name: "fondue",
+      img: "fondue.jpg",
+      ingredient: 1,
+      structure: 3,
     },
     {
       name: "ice cream sandwich",
