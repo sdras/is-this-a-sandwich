@@ -79,9 +79,25 @@
           Ingredient Purist, Structural Chaos
         </text>
       </g>
-      <ellipse cx="1100" cy="955" rx="165" ry="89.7" class="cls-11"></ellipse>
-      <ellipse cx="1100" cy="950" rx="165" ry="89.7" class="cls-12"></ellipse>
-      <text class="cls-13" transform="translate(1000 965)">Tweet it!</text>
+      <a :href="tweetit">
+        <g target="_blank" class="tweetit">
+          <ellipse
+            cx="1100"
+            cy="955"
+            rx="165"
+            ry="89.7"
+            class="cls-11"
+          ></ellipse>
+          <ellipse
+            cx="1100"
+            cy="950"
+            rx="165"
+            ry="89.7"
+            class="cls-12"
+          ></ellipse>
+          <text class="cls-13" transform="translate(1000 965)">Tweet it!</text>
+        </g>
+      </a>
     </g>
   </svg>
 </template>
@@ -100,6 +116,12 @@ export default {
       } else {
         return `150 320`;
       }
+    },
+    tweetit() {
+      return `https://twitter.com/intent/tweet?text=I+played+'Is+This+A+Sandwich'+on+@Netlify!+My+score+is+${this.finalScore}!+You+can+play+here:+https://isthisasandwich.netlify.com/&via=sarah_edo`;
+    },
+    finalScore() {
+      return `thing`;
     },
   },
 };
@@ -126,6 +148,10 @@ svg {
 
 .medal {
   font-size: 130px;
+}
+
+.tweetit {
+  cursor: pointer;
 }
 
 .thickborder {
