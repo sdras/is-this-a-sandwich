@@ -1,10 +1,5 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2082.4 1325.1">
-    <defs>
-      <clipPath id="imgclip">
-        <path d="M0 15.8H2061.1V1305.73H0z" />
-      </clipPath>
-    </defs>
     <path class="cls-1" d="M0 15.8H2061.1V1305.73H0z" id="BG" />
     <g id="Ready-made">
       <g class="cls-2">
@@ -3259,21 +3254,12 @@
       />
     </g>
     <g id="Information">
-      <image
-        x="420"
-        y="150"
-        :href="sandwichData[currentSandwichIndex].img"
-        height="1027"
-        width="1200"
-        clip-path="url(#imgclip)"
-      ></image>
-      <path
-        stroke-width="20"
-        stroke="#ec008c"
-        stroke-miterlimit="10"
-        fill="none"
-        d="M479.4 272H1604.3000000000002V1027.04H479.4z"
-      />
+      <foreignObject x="550" y="250" height="900" width="1000">
+        <div
+          class="fullbleed"
+          :style="`background: url(${sandwichData[currentSandwichIndex].img}) no-repeat center center;`"
+        ></div>
+      </foreignObject>
       <path
         class="cls-170"
         d="M1853.5 1210.7L1637.9 1210.7 1637.9 1098.1 1853.5 1098.1 1769.3 1149.4 1853.5 1210.7z"
@@ -3362,6 +3348,13 @@ export default {
 .yes,
 .no {
   cursor: pointer;
+}
+
+.fullbleed {
+  background-size: cover !important;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgb(46, 161, 161);
 }
 
 .cls-1 {
