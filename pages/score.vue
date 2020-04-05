@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1263 916.5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1263 1130">
     <g id="Layer_2" data-name="Layer 2">
       <rect class="cls-1" x="0.5" y="138" width="420.7" height="259.33" />
       <rect class="cls-1" x="421.2" y="138" width="420.7" height="259.33" />
@@ -34,20 +34,50 @@
         Your Score!
       </text>
     </g>
+
     <g id="key">
       <rect class="cls-2" x="449" y="145.5" width="355" height="46" />
-      <text class="cls-10" transform="translate(466.6 174.9)">
-        &lt; Ingredient Purist
+      <text class="cls-100" transform="translate(480 174.9)">
+        ⟵ Ingredient Purist
       </text>
-      <rect class="cls-2" x="7" y="366.5" width="39" height="329" />
-      <text class="cls-10" transform="translate(14.6 381.7) rotate(90)">
-        &lt; Structure Purist
+      <rect class="cls-2" x="1" y="366.5" width="50" height="329" />
+      <text class="cls-100" transform="translate(14.6 381.7) rotate(90)">
+        ⟵ Structure Purist
       </text>
     </g>
+
     <g if="finalPlayerPosition">
       <text :transform="`translate(${medalPosition})`" class="medal">
         🏆
       </text>
+    </g>
+
+    <g id="score">
+      <g>
+        <polygon
+          class="cls-8"
+          points="1198 224.1 1039.9 224.1 1039.9 141.6 1198 141.6 1136.3 179.3 1198 224.1"
+        />
+        <polygon
+          class="cls-9"
+          points="1039.9 224.1 1089.4 178.5 1089.4 96 1039.9 141.6 1039.9 224.1"
+        />
+        <polygon
+          class="cls-8"
+          points="49.5 224.1 207.6 224.1 207.6 141.6 49.5 141.6 111.2 179.3 49.5 224.1"
+        />
+        <polygon
+          class="cls-9"
+          points="207.6 224.1 158 178.5 158 96 207.6 141.6 207.6 224.1"
+        />
+        <rect class="cls-8" x="158" y="96" width="931.4" height="82.54" />
+      </g>
+      <text class="cls-10" transform="translate(301.6 147.8)">
+        Ingredient Purist, Structural Chaos
+      </text>
+      <ellipse class="cls-11" cx="632.7" cy="1036.3" rx="178.3" ry="89.7" />
+      <ellipse class="cls-12" cx="631.6" cy="1017.7" rx="178.3" ry="89.7" />
+      <text class="cls-13" transform="translate(527.3 1032.6)">Tweet it!</text>
     </g>
   </svg>
 </template>
@@ -82,16 +112,16 @@ html {
 
 <style lang="scss" scoped>
 svg {
-  margin: 20px 140px;
+  margin: 20px 250px;
 }
 
 .medal {
   font-size: 130px;
 }
 
-.cls-10 {
-  font-size: 36px;
-  fill: #d12f21;
+.cls-100 {
+  font-size: 32px;
+  fill: #af1872;
 }
 
 .cls-1,
@@ -100,9 +130,8 @@ svg {
 }
 
 .cls-1 {
-  stroke: #000;
+  stroke: #b16363;
   stroke-miterlimit: 10;
-  opacity: 0.9;
 }
 
 .cls-3 {
@@ -122,5 +151,38 @@ svg {
 
 .cls-6 {
   letter-spacing: -0.07em;
+}
+
+.cls-8 {
+  fill: #dfa5ac;
+}
+
+.cls-12,
+.cls-8,
+.cls-9 {
+  stroke: #eb008b;
+}
+
+.cls-9 {
+  fill: #cd818e;
+}
+
+.cls-10 {
+  font-size: 40px;
+}
+
+.cls-10,
+.cls-11,
+.cls-13 {
+  fill: #7c1d59;
+}
+
+.cls-12 {
+  fill: #f3cbce;
+  stroke-width: 10px;
+}
+
+.cls-13 {
+  font-size: 48px;
 }
 </style>
