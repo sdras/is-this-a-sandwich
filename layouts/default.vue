@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Sen", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -22,5 +22,14 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.button {
+  cursor: pointer;
+  transition: 0.1s all ease;
+  &:hover {
+    transform: translateY(10px);
+    transition: 0.2s all ease;
+  }
 }
 </style>

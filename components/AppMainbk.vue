@@ -3288,11 +3288,11 @@
     <g id="buttons">
       <ellipse class="cls-173" cx="1560.4" cy="1030.2" rx="155.4" ry="95.4" />
       <ellipse class="cls-173" cx="540.7" cy="1029.2" rx="155.4" ry="95.4" />
-      <g @click="pickyes" class="yes">
+      <g @click="pickyes" class="button yes">
         <ellipse class="cls-174" cx="539.7" cy="1009.4" rx="155.4" ry="95.4" />
         <text class="cls-175" transform="translate(473.7 1030.2)">YES</text>
       </g>
-      <g @click="pickno" class="no">
+      <g @click="pickno" class="button no">
         <ellipse class="cls-174" cx="1560.4" cy="1009.4" rx="155.4" ry="95.4" />
         <text class="cls-175" transform="translate(1505.9 1030.2)">NO</text>
       </g>
@@ -3362,16 +3362,6 @@ html {
 </style>
 
 <style lang="scss" scoped>
-.yes,
-.no {
-  cursor: pointer;
-  transition: 0.1s all ease;
-  &:hover {
-    transform: translateY(10px);
-    transition: 0.2s all ease;
-  }
-}
-
 .fullbleed {
   background-size: cover !important;
   width: 100%;

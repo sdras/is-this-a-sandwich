@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -100 1300 1145">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -100 1300 1165">
     <g id="Layer_2" data-name="Layer 2">
       <rect x="-7" y="130" width="1277" height="795" class="thickborder"></rect>
       <rect class="cls-1" x="0.5" y="138" width="420.7" height="259.33" />
@@ -79,15 +79,9 @@
           {{ finalScore }}
         </text>
       </g>
-      <a :href="tweetit">
+      <ellipse cx="1100" cy="960" rx="165" ry="89.7" class="cls-11"></ellipse>
+      <a :href="tweetit" class="button">
         <g target="_blank" class="tweetit">
-          <ellipse
-            cx="1100"
-            cy="955"
-            rx="165"
-            ry="89.7"
-            class="cls-11"
-          ></ellipse>
           <ellipse
             cx="1100"
             cy="950"
@@ -106,13 +100,14 @@
 import { mapGetters } from "vuex";
 
 export default {
+  middleware: "auth",
   methods: {
     awardAssignment(type) {
       let posType = this.finalPlayerPosition[type];
       console.log(`Type: ${type}, Amt: ${posType}`);
       if (parseInt(posType, 10) < 0.75) {
         return `${type} purist`;
-      } else if (parseInt(posType, 10) > 1.1) {
+      } else if (parseInt(posType, 10) > 1.25) {
         return `${type} anarchist`;
       } else {
         return `${type} neutral`;
@@ -123,10 +118,10 @@ export default {
     ...mapGetters(["finalPlayerPosition"]),
     medalPosition() {
       const xUnit = 420;
-      const yUnit = 305;
+      const yUnit = 455;
 
       const addUnits = (dir) =>
-        dir * this.finalPlayerPosition.ingredient + 1 + dir / 2;
+        dir * this.finalPlayerPosition.ingredient + dir / 2;
 
       if (this.finalPlayerPosition.ingredient > 0) {
         let xaxis = addUnits(xUnit);
