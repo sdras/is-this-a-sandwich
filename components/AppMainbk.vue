@@ -3294,17 +3294,16 @@
       </text>
     </g>
     <g id="buttons">
+      <ellipse class="cls-173" cx="1560.4" cy="1030.2" rx="155.4" ry="95.4" />
       <ellipse class="cls-173" cx="540.7" cy="1029.2" rx="155.4" ry="95.4" />
       <g @click="pickyes" class="yes">
         <ellipse class="cls-174" cx="539.7" cy="1009.4" rx="155.4" ry="95.4" />
         <text class="cls-175" transform="translate(473.7 1030.2)">YES</text>
       </g>
       <g @click="pickno" class="no">
-        <ellipse class="cls-173" cx="1560.4" cy="1030.2" rx="155.4" ry="95.4" />
+        <ellipse class="cls-174" cx="1560.4" cy="1009.4" rx="155.4" ry="95.4" />
         <text class="cls-175" transform="translate(1505.9 1030.2)">NO</text>
       </g>
-      <ellipse class="cls-174" cx="1560.4" cy="1009.4" rx="155.4" ry="95.4" />
-      <text class="cls-175" transform="translate(1505.9 1030.2)">NO</text>
       <text class="cls-172" transform="translate(730 130.6)">
         Is this is a sandwich?
       </text>
@@ -3333,15 +3332,20 @@ export default {
     };
   },
   methods: {
+    updateIndex() {
+      this.currentSandwichIndex += 1;
+    },
     pickyes() {
       console.log("yes!");
       let score = {
         ingredient: this.sandwichData[this.currentSandwichIndex].ingredient,
         structure: this.sandwichData[this.currentSandwichIndex].structure,
       };
+      this.updateIndex();
       this.$store.commit("mutationName", score);
     },
     pickno() {
+      this.updateIndex();
       console.log("no!");
     },
   },

@@ -30,19 +30,13 @@ export const state = () => ({
     },
     {
       name: "burger",
-      img: "url.jpg",
+      img: "burger.jpg",
       ingredient: 1.5,
       structure: 1,
     },
     {
       name: "fairy bread",
-      img: "url.jpg",
-      ingredient: 2,
-      structure: 2,
-    },
-    {
-      name: "fairy bread",
-      img: "url.jpg",
+      img: "fairybread.jpg",
       ingredient: 2,
       structure: 2,
     },
@@ -128,9 +122,9 @@ export const getters = {
 };
 
 export const mutations = {
-  updatePlayerScore: (state, payload) => {
-    state.playerScore.ingredient += payload.ingredient;
-    state.playerScore.structure += payload.structure;
+  updatePlayerScore: (state, score) => {
+    state.playerScore.ingredient += score.ingredient;
+    state.playerScore.structure += score.structure;
   },
 };
 
