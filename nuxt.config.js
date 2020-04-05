@@ -19,7 +19,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Sen:400,800&display=swap",
+          "https://fonts.googleapis.com/css?family=Sen:400,800|Marck+Script&display=swap",
       },
     ],
   },

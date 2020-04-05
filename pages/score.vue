@@ -1,6 +1,7 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -100 1275 1145">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -100 1300 1145">
     <g id="Layer_2" data-name="Layer 2">
+      <rect x="-7" y="130" width="1277" height="795" class="thickborder"></rect>
       <rect class="cls-1" x="0.5" y="138" width="420.7" height="259.33" />
       <rect class="cls-1" x="421.2" y="138" width="420.7" height="259.33" />
       <rect class="cls-1" x="841.8" y="138" width="420.7" height="259.33" />
@@ -70,11 +71,15 @@
           points="207.6 224.1 158 178.5 158 96 207.6 141.6 207.6 224.1"
         />
         <rect class="cls-8" x="158" y="96" width="931.4" height="82.54" />
-        <text class="cls-10" transform="translate(301.6 147.8)">
+        <text
+          text-anchor="middle"
+          class="cls-10"
+          transform="translate(620 147.8)"
+        >
           Ingredient Purist, Structural Chaos
         </text>
       </g>
-      <ellipse cx="1100" cy="950" rx="165" ry="89.7" class="cls-11"></ellipse>
+      <ellipse cx="1100" cy="955" rx="165" ry="89.7" class="cls-11"></ellipse>
       <ellipse cx="1100" cy="950" rx="165" ry="89.7" class="cls-12"></ellipse>
       <text class="cls-13" transform="translate(1000 965)">Tweet it!</text>
     </g>
@@ -102,7 +107,7 @@ export default {
 
 <style>
 html {
-  background: url("/ingredients.png") #f9b7b9 center center no-repeat;
+  background: url("/ingredients.png") #f9b7b9 center center repeat;
   background-size: cover !important;
   width: 99%;
   height: 99vh;
@@ -123,9 +128,15 @@ svg {
   font-size: 130px;
 }
 
+.thickborder {
+  stroke: #3c2c1b;
+  stroke-width: 6px;
+}
+
 .cls-100 {
   font-size: 32px;
   fill: #af1872;
+  font-family: "Marck Script", cursive;
 }
 
 .cls-1,
@@ -165,29 +176,34 @@ svg {
 .cls-12,
 .cls-8,
 .cls-9 {
-  stroke: #eb008b;
+  stroke: #1a0f00;
 }
 
 .cls-9 {
-  fill: #cd818e;
-}
-
-.cls-10 {
-  font-size: 40px;
+  fill: #1a0f00;
 }
 
 .cls-10,
-.cls-11,
 .cls-13 {
-  fill: #7c1d59;
+  font-size: 40px;
+  fill: #fff;
+}
+
+.cls-10 {
+  font-family: "Marck Script", cursive;
+}
+
+.cls-11 {
+  fill: #1a0f00;
 }
 
 .cls-12 {
   fill: #3c2c1b;
-  stroke-width: 10px;
+  stroke-width: 3px;
 }
 
 .cls-13 {
-  font-size: 48px;
+  font-size: 56px;
+  font-family: "Marck Script", cursive;
 }
 </style>
