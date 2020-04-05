@@ -1,5 +1,10 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2082.4 1325.1">
+    <defs>
+      <clipPath id="imgclip">
+        <path d="M0 15.8H2061.1V1305.73H0z" />
+      </clipPath>
+    </defs>
     <path class="cls-1" d="M0 15.8H2061.1V1305.73H0z" id="BG" />
     <g id="Ready-made">
       <g class="cls-2">
@@ -3255,12 +3260,13 @@
     </g>
     <g id="Information">
       <image
-        x="479"
-        y="272"
+        x="420"
+        y="150"
         :href="sandwichData[currentSandwichIndex].img"
         height="1027"
-        width="1604"
-      />
+        width="1200"
+        clip-path="url(#imgclip)"
+      ></image>
       <path
         stroke-width="20"
         stroke="#ec008c"
@@ -3342,7 +3348,7 @@ export default {
         structure: this.sandwichData[this.currentSandwichIndex].structure,
       };
       this.updateIndex();
-      this.$store.commit("mutationName", score);
+      this.$store.commit("updatePlayerScore", score);
     },
     pickno() {
       this.updateIndex();

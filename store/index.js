@@ -42,7 +42,7 @@ export const state = () => ({
     },
     {
       name: "chicken n waffles",
-      img: "chickenwaffles.jpg",
+      img: "chickenwaffles.jpeg",
       ingredient: 3,
       structure: 3,
     },
@@ -102,7 +102,7 @@ export const state = () => ({
     },
     {
       name: "potpie",
-      img: "potpie.jpg",
+      img: "potpie.jpeg",
       ingredient: 2,
       structure: 3,
     },
