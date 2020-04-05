@@ -106,17 +106,25 @@
 import { mapGetters } from "vuex";
 
 export default {
-  data() {
-    return {
-      finalScore: "loading...",
-    };
+  methods: {
+    awardAssignment(type) {
+      let posType = this.finalPlayerPosition[type];
+      console.log(`Type: ${type}, Amt: ${posType}`);
+      if (parseInt(posType, 10) < 0.75) {
+        return `${type} purist`;
+      } else if (parseInt(posType, 10) > 1.25) {
+        return `${type} anarchist`;
+      } else {
+        return `${type} neutral`;
+      }
+    },
   },
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
     medalPosition() {
       if (this.finalPlayerPosition.ingredient > 0) {
-        let xaxis = 1260 / this.finalPlayerPosition.ingredient;
-        let yaxis = 915 / this.finalPlayerPosition.structure - 138;
+        let xaxis = 420 * this.finalPlayerPosition.ingredient + 1;
+        let yaxis = 305 * (this.finalPlayerPosition.structure + 1) - 138;
         return xaxis + " " + yaxis;
       } else {
         return `150 320`;
@@ -125,21 +133,10 @@ export default {
     tweetit() {
       return `https://twitter.com/intent/tweet?text=I+played+'Is+This+A+Sandwich'+on+@Netlify!+My+score+is+${this.finalScore}!+You+can+play+here:+https://isthisasandwich.netlify.com/&via=sarah_edo`;
     },
-    awardAssigment(type) {
-      let posType = this.finalPlayerPosition[type];
-      if (parseInt(posType, 10) > 1.5) {
-        return `${type} purist`;
-      } else if (parseInt(posType, 10) < 2.5) {
-        return `${type} anarchist`;
-      } else {
-        return `${type} neutral`;
-      }
-    },
-    mounted() {
-      if (!this.finalPlayerPosition) return;
-      let ingredient = this.awardAssignment(ingredient);
-      let structure = this.awardAssignment(structure);
-      this.finalScore = `${ingredient}, ${structure}`;
+    finalScore() {
+      let ingredient = this.awardAssignment("ingredient");
+      let structure = this.awardAssignment("structure");
+      return `${ingredient}, ${structure}`;
     },
   },
 };
