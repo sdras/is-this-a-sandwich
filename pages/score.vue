@@ -15,19 +15,13 @@
     <g id="Layer_3" data-name="Layer 3">
       <text class="cls-3" transform="translate(81.2 285.6)">Lawful Good</text>
       <text class="cls-3" transform="translate(493.6 285.2)">Neutral Good</text>
-      <text class="cls-3" transform="translate(918.7 285.2)">
-        Cha
-        <tspan class="cls-4" x="77.2" y="0">o</tspan>
-        <tspan x="101.8" y="0">tic Good</tspan>
-      </text>
+      <text class="cls-3" transform="translate(918.7 285.2)">Chaotic Good</text>
       <text class="cls-3" transform="translate(59.8 552.9)">
         Lawful Neutral
       </text>
       <text class="cls-3" transform="translate(502.4 552.9)">True Neutral</text>
       <text class="cls-3" transform="translate(897.2 552.9)">
-        Cha
-        <tspan class="cls-4" x="77.2" y="0">o</tspan>
-        <tspan x="101.8" y="0">tic Neutral</tspan>
+        Chaotic Neutral
       </text>
       <text class="cls-3" transform="translate(98 804.4)">Lawful Evil</text>
       <text class="cls-3" transform="translate(510.3 804.4)">Neutral Evil</text>
@@ -37,22 +31,67 @@
         <tspan x="101.8" y="0">tic Evil</tspan>
       </text>
       <text class="cls-5" transform="translate(459.1 57.5)">
-        <tspan class="cls-6">Y</tspan>
-        <tspan x="38.4" y="0">our Score!</tspan>
+        Your Score!
+      </text>
+    </g>
+    <g id="key">
+      <rect class="cls-2" x="449" y="145.5" width="355" height="46" />
+      <text class="cls-10" transform="translate(466.6 174.9)">
+        &lt; Ingredient Purist
+      </text>
+      <rect class="cls-2" x="7" y="366.5" width="39" height="329" />
+      <text class="cls-10" transform="translate(14.6 381.7) rotate(90)">
+        &lt; Structure Purist
+      </text>
+    </g>
+    <g if="finalPlayerPosition">
+      <text :transform="`translate(${medalPosition})`" class="medal">
+        🏆
       </text>
     </g>
   </svg>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  layout: "pink",
+  computed: {
+    ...mapGetters(["finalPlayerPosition"]),
+    medalPosition() {
+      if (this.finalPlayerPosition.ingredient > 0) {
+        let xaxis = 1260 / this.finalPlayerPosition.ingredient;
+        let yaxis = 915 / this.finalPlayerPosition.structure - 138;
+        return xaxis + " " + yaxis;
+      } else {
+        return `150 320`;
+      }
+    },
+  },
 };
 </script>
+
+<style>
+html {
+  background: url("/ingredients.png") #f9b7b9 center center no-repeat;
+  background-size: cover !important;
+  width: 99%;
+  height: 99vh;
+}
+</style>
 
 <style lang="scss" scoped>
 svg {
   margin: 20px 140px;
+}
+
+.medal {
+  font-size: 130px;
+}
+
+.cls-10 {
+  font-size: 36px;
+  fill: #d12f21;
 }
 
 .cls-1,

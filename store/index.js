@@ -116,8 +116,15 @@ export const state = () => ({
 });
 
 export const getters = {
-  finalPlayerScore: (state) => {
-    return state.playerScore.ingredient + state.playerScore.structure;
+  finalPlayerPosition: (state) => {
+    return {
+      ingredient: (
+        state.playerScore.ingredient / state.sandwichData.length
+      ).toFixed(2),
+      structure: (
+        state.playerScore.structure / state.sandwichData.length
+      ).toFixed(2),
+    };
   },
 };
 
