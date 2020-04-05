@@ -128,8 +128,9 @@ export const getters = {
 };
 
 export const mutations = {
-  updateValue: (state, payload) => {
-    state.value = payload;
+  updatePlayerScore: (state, payload) => {
+    state.playerScore.ingredient += payload.ingredient;
+    state.playerScore.structure += payload.structure;
   },
 };
 
