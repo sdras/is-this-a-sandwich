@@ -76,7 +76,7 @@
           class="cls-10"
           transform="translate(620 147.8)"
         >
-          Ingredient Purist, Structural Chaos
+          {{ finalScore }}
         </text>
       </g>
       <a :href="tweetit">
@@ -106,6 +106,11 @@
 import { mapGetters } from "vuex";
 
 export default {
+  data() {
+    return {
+      finalScore: "loading...",
+    };
+  },
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
     medalPosition() {
@@ -120,8 +125,21 @@ export default {
     tweetit() {
       return `https://twitter.com/intent/tweet?text=I+played+'Is+This+A+Sandwich'+on+@Netlify!+My+score+is+${this.finalScore}!+You+can+play+here:+https://isthisasandwich.netlify.com/&via=sarah_edo`;
     },
-    finalScore() {
-      return `thing`;
+    awardAssigment(type) {
+      let posType = this.finalPlayerPosition[type];
+      if (parseInt(posType, 10) > 1.5) {
+        return `${type} purist`;
+      } else if (parseInt(posType, 10) < 2.5) {
+        return `${type} anarchist`;
+      } else {
+        return `${type} neutral`;
+      }
+    },
+    mounted() {
+      if (!this.finalPlayerPosition) return;
+      let ingredient = this.awardAssignment(ingredient);
+      let structure = this.awardAssignment(structure);
+      this.finalScore = `${ingredient}, ${structure}`;
     },
   },
 };
