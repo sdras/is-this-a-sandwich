@@ -3341,12 +3341,25 @@ export default {
       this.$store.commit("updatePlayerScore", score);
     },
     pickno() {
-      this.updateIndex();
       console.log("no!");
+      let score = {
+        ingredient: 1,
+        structure: 1,
+      };
+      this.updateIndex();
+      this.$store.commit("updatePlayerScore", score);
     },
   },
 };
 </script>
+
+<style>
+html {
+  background: #71caca;
+  width: 99%;
+  height: 100vh;
+}
+</style>
 
 <style lang="scss" scoped>
 .yes,
