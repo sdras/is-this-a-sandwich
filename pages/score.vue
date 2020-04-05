@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1263 1130">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -100 1275 1145">
     <g id="Layer_2" data-name="Layer 2">
       <rect class="cls-1" x="0.5" y="138" width="420.7" height="259.33" />
       <rect class="cls-1" x="421.2" y="138" width="420.7" height="259.33" />
@@ -10,7 +10,6 @@
       <rect class="cls-1" x="0.5" y="656.7" width="420.7" height="259.33" />
       <rect class="cls-1" x="421.2" y="656.7" width="420.7" height="259.33" />
       <rect class="cls-1" x="841.8" y="656.7" width="420.7" height="259.33" />
-      <rect class="cls-2" x="414.5" width="419" height="76" />
     </g>
     <g id="Layer_3" data-name="Layer 3">
       <text class="cls-3" transform="translate(81.2 285.6)">Lawful Good</text>
@@ -30,14 +29,14 @@
         <tspan class="cls-4" x="77.2" y="0">o</tspan>
         <tspan x="101.8" y="0">tic Evil</tspan>
       </text>
-      <text class="cls-5" transform="translate(459.1 57.5)">
+      <text class="cls-5" transform="translate(459.1 -30)">
         Your Score!
       </text>
     </g>
 
     <g id="key">
       <rect class="cls-2" x="449" y="145.5" width="355" height="46" />
-      <text class="cls-100" transform="translate(480 174.9)">
+      <text class="cls-100" transform="translate(480 900)">
         ⟵ Ingredient Purist
       </text>
       <rect class="cls-2" x="1" y="366.5" width="50" height="329" />
@@ -53,7 +52,7 @@
     </g>
 
     <g id="score">
-      <g>
+      <g class="ribbon">
         <polygon
           class="cls-8"
           points="1198 224.1 1039.9 224.1 1039.9 141.6 1198 141.6 1136.3 179.3 1198 224.1"
@@ -71,13 +70,13 @@
           points="207.6 224.1 158 178.5 158 96 207.6 141.6 207.6 224.1"
         />
         <rect class="cls-8" x="158" y="96" width="931.4" height="82.54" />
+        <text class="cls-10" transform="translate(301.6 147.8)">
+          Ingredient Purist, Structural Chaos
+        </text>
       </g>
-      <text class="cls-10" transform="translate(301.6 147.8)">
-        Ingredient Purist, Structural Chaos
-      </text>
-      <ellipse class="cls-11" cx="632.7" cy="1036.3" rx="178.3" ry="89.7" />
-      <ellipse class="cls-12" cx="631.6" cy="1017.7" rx="178.3" ry="89.7" />
-      <text class="cls-13" transform="translate(527.3 1032.6)">Tweet it!</text>
+      <ellipse cx="1100" cy="950" rx="165" ry="89.7" class="cls-11"></ellipse>
+      <ellipse cx="1100" cy="950" rx="165" ry="89.7" class="cls-12"></ellipse>
+      <text class="cls-13" transform="translate(1000 965)">Tweet it!</text>
     </g>
   </svg>
 </template>
@@ -112,7 +111,12 @@ html {
 
 <style lang="scss" scoped>
 svg {
-  margin: 20px 250px;
+  margin: 10px 250px;
+}
+
+.ribbon {
+  transform: translateY(-80px) scale(0.9);
+  transform-origin: 50% 50%;
 }
 
 .medal {
@@ -144,6 +148,7 @@ svg {
 }
 
 .cls-5 {
+  fill: #3c2c1b;
   font-size: 60px;
   font-family: Sen-ExtraBold, Sen;
   font-weight: 800;
@@ -154,7 +159,7 @@ svg {
 }
 
 .cls-8 {
-  fill: #dfa5ac;
+  fill: #3c2c1b;
 }
 
 .cls-12,
@@ -178,7 +183,7 @@ svg {
 }
 
 .cls-12 {
-  fill: #f3cbce;
+  fill: #3c2c1b;
   stroke-width: 10px;
 }
 
