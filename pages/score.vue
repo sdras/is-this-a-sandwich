@@ -101,45 +101,57 @@ import { mapGetters } from "vuex";
 
 export default {
   middleware: "auth",
+  data() {
+    return {
+      assignArr: [0, 0],
+      medalPosition: `150 320`,
+      xVals: [150, 560, 990],
+      yVals: [320, 590, 850],
+    };
+  },
   methods: {
     awardAssignment(type) {
       let posType = this.finalPlayerPosition[type];
-      console.log(`Type: ${type}, Amt: ${posType}`);
       if (posType < 1.1) {
+        type === "ingredient"
+          ? (this.assignArr[0] = 0)
+          : (this.assignArr[1] = 0);
         return `${type} purist`;
       } else if (posType > 1.5) {
+        type === "ingredient"
+          ? (this.assignArr[0] = 2)
+          : (this.assignArr[1] = 2);
         return `${type} anarchist`;
       } else {
+        type === "ingredient"
+          ? (this.assignArr[0] = 1)
+          : (this.assignArr[1] = 1);
         return `${type} neutral`;
       }
+    },
+    getMedalPosition() {
+      if (!this.finalPlayerPosition.ingredient > 0) return;
+      console.log(
+        `assignArr: ${this.assignArr}, yVals: ${this.yVals[this.assignArr[1]]}`
+      );
+      this.medalPosition = `${this.xVals[this.assignArr[0]]} ${
+        this.yVals[this.assignArr[1]]
+      }`;
     },
   },
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
-    medalPosition() {
-      const xUnit = 320;
-      const yUnit = 440;
-
-      // TODO: scale of 0.5 to 2
-      const addUnits = (dir) =>
-        dir * (this.finalPlayerPosition.ingredient - 1) + dir / 2;
-
-      if (this.finalPlayerPosition.ingredient > 0) {
-        let xaxis = addUnits(xUnit);
-        let yaxis = addUnits(yUnit) + 120;
-        return xaxis + " " + yaxis;
-      } else {
-        return `150 320`;
-      }
-    },
     tweetit() {
-      return `https://twitter.com/intent/tweet?text=I+played+'Is+This+A+Sandwich'+on+@Netlify!+My+score+is+${this.finalScore}!+You+can+play+here:+https://isthisasandwich.netlify.com/&via=sarah_edo`;
+      return `https://twitter.com/intent/tweet?text=I+played+'Is+This+A+Sandwich'+on+@Netlify!+I+am+an+${this.finalScore}!+You+can+play+here:+https://isthisasandwich.netlify.com/&via=sarah_edo`;
     },
     finalScore() {
       let ingredient = this.awardAssignment("ingredient");
       let structure = this.awardAssignment("structure");
       return `${ingredient}, ${structure}`;
     },
+  },
+  mounted() {
+    this.getMedalPosition();
   },
 };
 </script>
