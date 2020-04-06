@@ -1,5 +1,9 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2082.4 1325.1">
+  <svg
+    ref="mainsvg"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 2082.4 1325.1"
+  >
     <path class="cls-1" d="M0 15.8H2061.1V1305.73H0z" id="BG" />
     <g id="Ready-made">
       <g class="cls-2">
@@ -3313,14 +3317,19 @@
 
 <script>
 import { mapState } from "vuex";
+import AppWut from "@/components/AppWut.vue";
 
 export default {
+  components: {
+    AppWut,
+  },
   computed: {
     ...mapState(["sandwichData"]),
   },
   data() {
     return {
       currentSandwichIndex: 0,
+      woah: false,
     };
   },
   methods: {
@@ -3332,6 +3341,13 @@ export default {
       }
     },
     pickyes() {
+      if (
+        this.sandwichData[this.currentSandwichIndex].name === "soup dumpling"
+      ) {
+        this.woah = true;
+        setTimeout(() => (this.woah = false), 1000);
+      }
+
       let score = {
         ingredient: this.sandwichData[this.currentSandwichIndex].ingredient,
         structure: this.sandwichData[this.currentSandwichIndex].structure,
@@ -3347,6 +3363,27 @@ export default {
       this.updateIndex();
       this.$store.commit("updatePlayerScore", score);
     },
+    changeSVG() {
+      const mainsvg = this.$refs.mainsvg;
+      const mq = window.matchMedia("(max-width: 600px)");
+
+      // media query event handler
+      if (matchMedia) {
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+      }
+      // media query change
+      function WidthChange(mq) {
+        if (mq.matches) {
+          mainsvg.setAttribute("viewBox", `370 0 1350 1325.1`);
+        } else {
+          mainsvg.setAttribute("viewBox", `0 0 2082.4 1325.1`);
+        }
+      }
+    },
+  },
+  mounted() {
+    this.changeSVG();
   },
 };
 </script>

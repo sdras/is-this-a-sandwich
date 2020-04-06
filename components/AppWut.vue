@@ -1,5 +1,10 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1019 658.7">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1019 658.7"
+    :width="width"
+    :height="height"
+  >
     <path
       class="cls-1"
       d="M33.4 299.3H983.1999999999999V622.6800000000001H33.4z"
@@ -1774,7 +1779,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    width: {
+      type: Number,
+      default: 400,
+    },
+    height: {
+      type: Number,
+      default: 300,
+    },
+  },
+  mounted() {
+    //animation
+    //close it up
+  },
+};
 </script>
 
 <style lang="scss" scoped>
