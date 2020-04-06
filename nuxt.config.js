@@ -13,6 +13,18 @@ export default {
         name: "description",
         content: process.env.npm_package_description || "",
       },
+      { name: "twitter:card", content: "Vote on whether this is a sandwich" },
+      { name: "twitter:site", content: "@sarah_edo" },
+      { name: "twitter:title", content: "Is this a Sandwich?" },
+      {
+        name: "twitter:description",
+        content: "Well, is it?",
+      },
+      {
+        name: "twitter:image",
+        content: "https://isthisasandwich.netlify.com/og-twitter.png",
+      },
+      { name: "twitter:image:alt", content: "Is this a sandwich? site" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
