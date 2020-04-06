@@ -117,16 +117,16 @@ export default {
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
     medalPosition() {
-      const xUnit = 630;
-      const yUnit = 456;
+      const xUnit = 320;
+      const yUnit = 440;
 
       // TODO: scale of 0.5 to 2
       const addUnits = (dir) =>
-        dir * this.finalPlayerPosition.ingredient - 1 + dir / 2;
+        dir * (this.finalPlayerPosition.ingredient - 1) + dir / 2;
 
       if (this.finalPlayerPosition.ingredient > 0) {
         let xaxis = addUnits(xUnit);
-        let yaxis = addUnits(yUnit) + 95;
+        let yaxis = addUnits(yUnit) + 120;
         return xaxis + " " + yaxis;
       } else {
         return `150 320`;
