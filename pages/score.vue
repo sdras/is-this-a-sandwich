@@ -79,19 +79,35 @@
           {{ finalScore }}
         </text>
       </g>
-      <ellipse cx="1100" cy="960" rx="165" ry="89.7" class="cls-11"></ellipse>
+      <ellipse cx="1100" cy="960" rx="165" ry="60" class="cls-11"></ellipse>
       <a :href="tweetit" class="button">
         <g target="_blank" class="tweetit">
-          <ellipse
-            cx="1100"
-            cy="950"
-            rx="165"
-            ry="89.7"
-            class="cls-12"
-          ></ellipse>
+          <ellipse cx="1100" cy="950" rx="165" ry="60" class="cls-12"></ellipse>
           <text class="cls-13" transform="translate(1000 965)">Tweet it!</text>
         </g>
       </a>
+
+      <rect
+        x="500"
+        y="960"
+        width="275"
+        height="60"
+        class="cls-16"
+        rx="10"
+        ry="10"
+      ></rect>
+      <g @click="goHome" class="tweetit button">
+        <rect
+          x="500"
+          y="950"
+          width="275"
+          height="60"
+          class="cls-15"
+          rx="10"
+          ry="10"
+        ></rect>
+        <text class="cls-17" transform="translate(540 990)">Play Again!</text>
+      </g>
     </g>
   </svg>
 </template>
@@ -137,6 +153,9 @@ export default {
       this.medalPosition = `${this.xVals[this.assignArr[0]]} ${
         this.yVals[this.assignArr[1]]
       }`;
+    },
+    goHome() {
+      this.$router.push("/");
     },
   },
   computed: {
@@ -260,6 +279,18 @@ svg {
 .cls-13 {
   font-size: 56px;
   font-family: "Marck Script", cursive;
+}
+
+.cls-15 {
+  fill: #ef485f;
+}
+
+.cls-16 {
+  fill: rgb(177, 42, 60);
+}
+
+.cls-17 {
+  font-size: 35px;
 }
 
 @media only screen and (max-width: 1000px) {
