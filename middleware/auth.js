@@ -1,8 +1,5 @@
-export default function ({ store, error }) {
-  if (!store.state.playerScore.ingredient === 0) {
-    error({
-      message: "Page not found",
-      statusCode: 404,
-    });
+export default function ({ store, redirect }) {
+  if (store.state.playerScore.ingredient < 1) {
+    return redirect("/");
   }
 }
