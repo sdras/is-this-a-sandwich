@@ -3258,10 +3258,11 @@
       />
     </g>
     <g id="Information">
+      <rect fill="#2ea1a1" x="550" y="250" height="900" width="1000" />
       <foreignObject x="550" y="250" height="900" width="1000">
         <div
           class="fullbleed"
-          :style="`background: url(${sandwichData[currentSandwichIndex].img}) no-repeat center center;`"
+          :style="`background: url(${sandwichData[currentSandwichIndex].img}) no-repeat center center`"
         ></div>
       </foreignObject>
       <path
@@ -3317,12 +3318,8 @@
 
 <script>
 import { mapState } from "vuex";
-import AppWut from "@/components/AppWut.vue";
 
 export default {
-  components: {
-    AppWut,
-  },
   computed: {
     ...mapState(["sandwichData"]),
   },
