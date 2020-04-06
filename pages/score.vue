@@ -249,4 +249,20 @@ svg {
   font-size: 56px;
   font-family: "Marck Script", cursive;
 }
+
+@media only screen and (max-width: 1000px) {
+  svg {
+    margin: 10px 150px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  svg {
+    margin: 10px 0px;
+  }
+
+  .cls-10 {
+    font-size: 55px;
+  }
+}
 </style>
