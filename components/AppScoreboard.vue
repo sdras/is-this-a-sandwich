@@ -152,9 +152,7 @@ export default {
     },
     getMedalPosition() {
       if (!this.finalPlayerPosition.ingredient > 0) return;
-      console.log(
-        `assignArr: ${this.assignArr}, yVals: ${this.yVals[this.assignArr[1]]}`
-      );
+
       this.medalPosition = `${this.xVals[this.assignArr[0]]} ${
         this.yVals[this.assignArr[1]]
       }`;

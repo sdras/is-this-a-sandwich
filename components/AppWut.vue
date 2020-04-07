@@ -12,7 +12,6 @@ import gsap from "gsap";
 export default {
   methods: {
     updateWut() {
-      console.log("did it!");
       this.$store.commit("updateWut");
     },
   },
