@@ -8,6 +8,10 @@ We'll learn a lot about ourselves, each other, and sandwiches. And in the proces
 
 I fully do not intend to maintain this, really. Feel free to submit the most pedantic PRs in the world, just please don't expect me to spend much time reviewing them :)
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/jlengstorf/love-and-gridsome&utm_source=learnwithjason&utm_medium=github&utm_campaign=devex">
+  <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy this project to Netlify" />
+</a>
+
 ![screenshot of is this a sandwich site](https://isthisasandwich.netlify.com/og-sandwich.png "Is this a sandwich site")
 
 This repo is dedicated to Jason Lengstorf, who will absolutely hate my scoring system.
