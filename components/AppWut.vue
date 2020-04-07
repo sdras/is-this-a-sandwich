@@ -10,6 +10,12 @@
 import gsap from "gsap";
 
 export default {
+  methods: {
+    updateWut() {
+      console.log("did it!");
+      this.$store.commit("updateWut");
+    },
+  },
   mounted() {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -34,6 +40,7 @@ export default {
       transformOrigin: "50% 50%",
       ease: "sine.in",
     });
+    tl.call(this.updateWut);
   },
 };
 </script>
@@ -41,8 +48,9 @@ export default {
 <style lang="scss">
 .wutcontain {
   position: absolute;
-  left: 30%;
-  top: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 @media screen and (max-width: 600px) {

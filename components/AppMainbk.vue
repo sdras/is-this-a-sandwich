@@ -3324,14 +3324,15 @@ export default {
     ...mapState(["sandwichData", "currentSandwichIndex", "showWut"]),
   },
   methods: {
-    updateIndex() {
+    updateIndex(decision) {
       if (this.currentSandwichIndex < this.sandwichData.length - 1) {
-        if (this.currentSandwichIndex === 2 && this.showWut === false) {
+        if (
+          this.sandwichData[this.currentSandwichIndex].wut &&
+          this.showWut === false &&
+          decision === "yes"
+        ) {
           this.$store.commit("updateWut");
-          setTimeout(function () {
-            this.$store.commit("updateCurrentSandwichIndex");
-            this.$store.commit("updateWut");
-          }, 6000);
+          this.$store.commit("updateCurrentSandwichIndex");
         } else {
           this.$store.commit("updateCurrentSandwichIndex");
         }
@@ -3344,7 +3345,7 @@ export default {
         ingredient: this.sandwichData[this.currentSandwichIndex].ingredient,
         structure: this.sandwichData[this.currentSandwichIndex].structure,
       };
-      this.updateIndex();
+      this.updateIndex("yes");
       this.$store.commit("updatePlayerScore", score);
     },
     pickno() {
@@ -3352,7 +3353,7 @@ export default {
         ingredient: 1,
         structure: 1,
       };
-      this.updateIndex();
+      this.updateIndex("no");
       this.$store.commit("updatePlayerScore", score);
     },
     changeSVG() {
