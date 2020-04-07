@@ -120,7 +120,7 @@ export default {
       assignArr: [0, 0],
       medalPosition: `150 320`,
       xVals: [150, 560, 990],
-      yVals: [320, 590, 850]
+      yVals: [320, 590, 850],
     };
   },
   methods: {
@@ -160,7 +160,7 @@ export default {
     goHome() {
       this.$store.commit("resetSandwichIndex");
       this.$router.push("/");
-    }
+    },
   },
   computed: {
     ...mapGetters(["finalPlayerPosition"]),
@@ -171,11 +171,11 @@ export default {
       let ingredient = this.awardAssignment("ingredient");
       let structure = this.awardAssignment("structure");
       return `${ingredient}, ${structure}`;
-    }
+    },
   },
   mounted() {
     this.getMedalPosition();
-  }
+  },
 };
 </script>
 
