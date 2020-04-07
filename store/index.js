@@ -149,6 +149,7 @@ export const getters = {
 
 export const mutations = {
   updatePlayerScore: (state, score) => {
+    console.log(state.playerScore.ingredient, state.playerScore.structure);
     state.playerScore.ingredient += score.ingredient;
     state.playerScore.structure += score.structure;
   },
@@ -160,5 +161,9 @@ export const mutations = {
   },
   resetSandwichIndex: (state) => {
     state.currentSandwichIndex = 0;
+    state.playerScore = {
+      ingredient: 0,
+      structure: 0,
+    };
   }
 };
