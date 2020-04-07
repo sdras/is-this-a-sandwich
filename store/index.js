@@ -4,6 +4,7 @@ export const state = () => ({
     structure: 0,
   },
   currentSandwichIndex: 0,
+  showWut: false,
   sandwichData: [
     {
       name: "sandwich",
@@ -135,6 +136,10 @@ export const mutations = {
     state.playerScore.structure += score.structure;
   },
   updateCurrentSandwichIndex: (state) => {
+    if (state.currentSandwichIndex === 2) {
+      state.showWut = true;
+    }
+
     state.currentSandwichIndex += 1;
   },
 };

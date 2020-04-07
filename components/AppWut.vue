@@ -16,10 +16,10 @@ export default {
       {
         duration: 5,
         scale: 0,
-        opacity: 0,
+        autoAlpha: 0,
       },
       {
-        opacity: 1,
+        autoAlpha: 1,
         scale: 1,
         transformOrigin: "50% 50%",
         ease: "bounce",
@@ -30,7 +30,8 @@ export default {
       duration: 1,
       delay: 1,
       scale: 0,
-      opacity: 0,
+      autoAlpha: 0,
+      display: "none",
       transformOrigin: "50% 50%",
       ease: "bounce.in",
     });
@@ -45,8 +46,15 @@ export default {
   top: 40%;
 }
 
+@media screen and (max-width: 600px) {
+  .wutcontain {
+    left: 20%;
+    top: 30%;
+  }
+}
+
 h1 {
-  font-size: 100px;
+  font-size: 10vw;
   color: #ffd546;
   padding: 20px;
   background: rgba(0, 0, 150, 0.5);

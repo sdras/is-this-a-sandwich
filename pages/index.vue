@@ -1,18 +1,22 @@
 <template>
   <main>
     <app-mainbk />
-    <app-wut />
+    <app-wut v-if="showWut" />
   </main>
 </template>
 
 <script>
 import AppMainbk from "~/components/AppMainbk.vue";
 import AppWut from "@/components/AppWut.vue";
+import { mapState } from "vuex";
 
 export default {
   components: {
     AppWut,
     AppMainbk,
+  },
+  computed: {
+    ...mapState(["showWut"]),
   },
 };
 </script>
