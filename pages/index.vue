@@ -1,14 +1,17 @@
 <template>
   <main>
     <app-mainbk />
+    <app-wut />
   </main>
 </template>
 
 <script>
 import AppMainbk from "~/components/AppMainbk.vue";
+import AppWut from "@/components/AppWut.vue";
 
 export default {
   components: {
+    AppWut,
     AppMainbk,
   },
 };
