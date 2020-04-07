@@ -125,6 +125,9 @@ export default {
   },
   methods: {
     awardAssignment(type) {
+      const min = 1.5,
+        max = 1.9;
+
       let posType = this.finalPlayerPosition[type];
       if (posType < 1.1) {
         type === "ingredient"
@@ -185,6 +188,7 @@ html {
 <style lang="scss" scoped>
 svg {
   margin: 10px 250px;
+  max-height: 950px;
 }
 
 .ribbon {
