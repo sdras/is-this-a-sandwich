@@ -3332,10 +3332,8 @@ export default {
           decision === "yes"
         ) {
           this.$store.commit("updateWut");
-          this.$store.commit("updateCurrentSandwichIndex");
-        } else {
-          this.$store.commit("updateCurrentSandwichIndex");
         }
+        this.$store.commit("updateCurrentSandwichIndex");
       } else {
         this.$router.push("/score");
       }
