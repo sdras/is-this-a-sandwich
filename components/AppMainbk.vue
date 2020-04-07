@@ -3326,7 +3326,6 @@ export default {
   data() {
     return {
       currentSandwichIndex: 0,
-      woah: false,
     };
   },
   methods: {
@@ -3338,13 +3337,6 @@ export default {
       }
     },
     pickyes() {
-      if (
-        this.sandwichData[this.currentSandwichIndex].name === "soup dumpling"
-      ) {
-        this.woah = true;
-        setTimeout(() => (this.woah = false), 1000);
-      }
-
       let score = {
         ingredient: this.sandwichData[this.currentSandwichIndex].ingredient,
         structure: this.sandwichData[this.currentSandwichIndex].structure,
