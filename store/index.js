@@ -51,7 +51,7 @@ export const state = () => ({
     {
       name: "chicken n waffles",
       img: "chickenwaffles.jpeg",
-      ingredient: 2,
+      ingredient: 1,
       structure: 3,
       wut: false,
     },
@@ -107,7 +107,7 @@ export const state = () => ({
       name: "twitter photo",
       img: "twit.jpg",
       ingredient: 1,
-      structure: 1,
+      structure: 3,
       wut: false,
     },
     {
@@ -128,7 +128,7 @@ export const state = () => ({
       name: "hot dog",
       img: "hotdog.jpg",
       ingredient: 2,
-      structure: 2,
+      structure: 3,
       wut: false,
     },
   ],

@@ -125,8 +125,12 @@ export default {
   },
   methods: {
     awardAssignment(type) {
-      const min = 1.35,
-        max = 1.9;
+      let min, max;
+      if (type === "ingredient") {
+        (min = 1.2), (max = 1.9);
+      } else {
+        (min = 1.2), (max = 1.7);
+      }
 
       let posType = this.finalPlayerPosition[type];
       if (posType < min) {
