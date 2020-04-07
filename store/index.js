@@ -14,7 +14,7 @@ export const state = () => ({
     {
       name: "empanada",
       img: "empanada.jpg",
-      ingredient: 1.5,
+      ingredient: 1,
       structure: 3,
     },
     {
@@ -26,56 +26,56 @@ export const state = () => ({
     {
       name: "folded pizza",
       img: "pizza.jpg",
-      ingredient: 2,
-      structure: 2,
+      ingredient: 3,
+      structure: 1,
     },
     {
       name: "burger",
       img: "burger.jpg",
-      ingredient: 1.5,
+      ingredient: 2,
       structure: 1,
     },
     {
       name: "fairy bread",
       img: "fairybread.jpg",
-      ingredient: 2,
-      structure: 2,
+      ingredient: 3,
+      structure: 1,
     },
     {
       name: "chicken n waffles",
       img: "chickenwaffles.jpeg",
-      ingredient: 3,
+      ingredient: 1,
       structure: 3,
     },
     {
       name: "lasagna",
       img: "lasagna.jpg",
-      ingredient: 2.5,
+      ingredient: 3,
       structure: 2,
     },
     {
       name: "samosa",
       img: "samosa.jpg",
-      ingredient: 2,
-      structure: 3,
+      ingredient: 3,
+      structure: 1,
     },
     {
       name: "crepes",
       img: "crepes.jpg",
-      ingredient: 2,
+      ingredient: 3,
       structure: 1,
     },
     {
       name: "crackers and cheese",
       img: "ritz.jpg",
-      ingredient: 1,
+      ingredient: 1.5,
       structure: 1,
     },
     {
       name: "sushiburrito",
       img: "sushiburrito.jpg",
       ingredient: 3,
-      structure: 2.5,
+      structure: 1,
     },
     {
       name: "fondue",
@@ -104,8 +104,8 @@ export const state = () => ({
     {
       name: "potpie",
       img: "potpie.jpeg",
-      ingredient: 2,
-      structure: 3,
+      ingredient: 3,
+      structure: 1,
     },
     {
       name: "hot dog",

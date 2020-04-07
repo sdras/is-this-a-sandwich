@@ -125,7 +125,7 @@ export default {
   },
   methods: {
     awardAssignment(type) {
-      const min = 1.5,
+      const min = 1.2,
         max = 1.9;
 
       let posType = this.finalPlayerPosition[type];
