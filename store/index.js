@@ -158,4 +158,11 @@ export const mutations = {
   updateWut: (state) => {
     state.showWut = !state.showWut;
   },
+  resetSandwichIndex: (state) => {
+    state.currentSandwichIndex = 0;
+    state.playerScore = {
+      ingredient: 0,
+      structure: 0,
+    };
+  }
 };

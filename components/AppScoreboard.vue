@@ -158,6 +158,7 @@ export default {
       }`;
     },
     goHome() {
+      this.$store.commit("resetSandwichIndex");
       this.$router.push("/");
     },
   },
