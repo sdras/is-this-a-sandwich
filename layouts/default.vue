@@ -1,8 +1,19 @@
 <template>
   <div>
     <nuxt />
+    <app-github-corner />
   </div>
 </template>
+
+<script>
+import AppGithubCorner from "@/components/AppGithubCorner.vue";
+
+export default {
+  components: {
+    AppGithubCorner,
+  },
+};
+</script>
 
 <style lang="scss">
 html {
