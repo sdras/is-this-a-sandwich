@@ -3364,9 +3364,9 @@ export default {
       // media query change
       function WidthChange(mq) {
         if (mq.matches) {
-          mainsvg.setAttribute("viewBox", `370 0 1350 1325.1`);
+          mainsvg.setAttribute("viewBox", `370 0 1350 1325`);
         } else {
-          mainsvg.setAttribute("viewBox", `0 0 2082.4 1325.1`);
+          mainsvg.setAttribute("viewBox", `0 0 2082 1325`);
         }
       }
     },
@@ -3391,6 +3391,10 @@ html {
   width: 100%;
   height: 100%;
   border: 3px solid rgb(46, 161, 161);
+}
+
+svg {
+  max-height: 1000px;
 }
 
 .cls-1 {
