@@ -26,9 +26,7 @@
       <text class="cls-3" transform="translate(98 804.4)">Lawful Evil</text>
       <text class="cls-3" transform="translate(510.3 804.4)">Neutral Evil</text>
       <text class="cls-3" transform="translate(935.4 804.4)">
-        Cha
-        <tspan class="cls-4" x="77.2" y="0">o</tspan>
-        <tspan x="101.8" y="0">tic Evil</tspan>
+        Chaotic Evil
       </text>
       <text class="cls-5" transform="translate(459.1 -30)">
         Your Score!

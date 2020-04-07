@@ -3321,17 +3321,12 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["sandwichData"]),
-  },
-  data() {
-    return {
-      currentSandwichIndex: 0,
-    };
+    ...mapState(["sandwichData", "currentSandwichIndex"]),
   },
   methods: {
     updateIndex() {
       if (this.currentSandwichIndex < this.sandwichData.length - 1) {
-        this.currentSandwichIndex += 1;
+        this.$store.commit("updateCurrentSandwichIndex");
       } else {
         this.$router.push("/score");
       }

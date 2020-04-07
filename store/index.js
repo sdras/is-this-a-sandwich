@@ -3,6 +3,7 @@ export const state = () => ({
     ingredient: 0,
     structure: 0,
   },
+  currentSandwichIndex: 0,
   sandwichData: [
     {
       name: "sandwich",
@@ -132,6 +133,9 @@ export const mutations = {
   updatePlayerScore: (state, score) => {
     state.playerScore.ingredient += score.ingredient;
     state.playerScore.structure += score.structure;
+  },
+  updateCurrentSandwichIndex: (state) => {
+    state.currentSandwichIndex += 1;
   },
 };
 
