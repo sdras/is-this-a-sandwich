@@ -131,6 +131,13 @@ export const state = () => ({
       structure: 3,
       wut: false,
     },
+    {
+      name: "pop-tart",
+      img: "pop-tart.jpg",
+      ingredient: 1,
+      structure: 2,
+      wut: true,
+    },
   ],
 });
 
