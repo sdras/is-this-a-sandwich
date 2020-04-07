@@ -1,7 +1,7 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -100 1300 1165">
     <g id="Layer_2" data-name="Layer 2">
-      <rect x="-7" y="130" width="1277" height="795" class="thickborder" />
+      <rect x="-7" y="130" width="1277" height="795" class="thickborder"></rect>
       <rect class="cls-1" x="0.5" y="138" width="420.7" height="259.33" />
       <rect class="cls-1" x="421.2" y="138" width="420.7" height="259.33" />
       <rect class="cls-1" x="841.8" y="138" width="420.7" height="259.33" />
@@ -16,24 +16,38 @@
       <text class="cls-3" transform="translate(81.2 285.6)">Lawful Good</text>
       <text class="cls-3" transform="translate(493.6 285.2)">Neutral Good</text>
       <text class="cls-3" transform="translate(918.7 285.2)">Chaotic Good</text>
-      <text class="cls-3" transform="translate(59.8 552.9)">Lawful Neutral</text>
+      <text class="cls-3" transform="translate(59.8 552.9)">
+        Lawful Neutral
+      </text>
       <text class="cls-3" transform="translate(502.4 552.9)">True Neutral</text>
-      <text class="cls-3" transform="translate(897.2 552.9)">Chaotic Neutral</text>
+      <text class="cls-3" transform="translate(897.2 552.9)">
+        Chaotic Neutral
+      </text>
       <text class="cls-3" transform="translate(98 804.4)">Lawful Evil</text>
       <text class="cls-3" transform="translate(510.3 804.4)">Neutral Evil</text>
-      <text class="cls-3" transform="translate(935.4 804.4)">Chaotic Evil</text>
-      <text class="cls-5" transform="translate(459.1 -30)">Your Score!</text>
+      <text class="cls-3" transform="translate(935.4 804.4)">
+        Chaotic Evil
+      </text>
+      <text class="cls-5" transform="translate(459.1 -30)">
+        Your Score!
+      </text>
     </g>
 
     <g id="key">
       <rect class="cls-2" x="449" y="145.5" width="355" height="46" />
-      <text class="cls-100" transform="translate(480 900)">⟵ Ingredient Purist</text>
+      <text class="cls-100" transform="translate(480 900)">
+        ⟵ Ingredient Purist
+      </text>
       <rect class="cls-2" x="1" y="366.5" width="50" height="329" />
-      <text class="cls-100" transform="translate(14.6 381.7) rotate(90)">⟵ Structure Purist</text>
+      <text class="cls-100" transform="translate(14.6 381.7) rotate(90)">
+        ⟵ Structure Purist
+      </text>
     </g>
 
     <g if="finalPlayerPosition">
-      <text :transform="`translate(${medalPosition})`" class="medal">🏆</text>
+      <text :transform="`translate(${medalPosition})`" class="medal">
+        🏆
+      </text>
     </g>
 
     <g id="score">
@@ -50,21 +64,46 @@
           class="cls-8"
           points="49.5 224.1 207.6 224.1 207.6 141.6 49.5 141.6 111.2 179.3 49.5 224.1"
         />
-        <polygon class="cls-9" points="207.6 224.1 158 178.5 158 96 207.6 141.6 207.6 224.1" />
+        <polygon
+          class="cls-9"
+          points="207.6 224.1 158 178.5 158 96 207.6 141.6 207.6 224.1"
+        />
         <rect class="cls-8" x="158" y="96" width="931.4" height="82.54" />
-        <text text-anchor="middle" class="cls-10" transform="translate(620 147.8)">{{ finalScore }}</text>
+        <text
+          text-anchor="middle"
+          class="cls-10"
+          transform="translate(620 147.8)"
+        >
+          {{ finalScore }}
+        </text>
       </g>
-      <ellipse cx="1100" cy="960" rx="165" ry="60" class="cls-11" />
+      <ellipse cx="1100" cy="960" rx="165" ry="60" class="cls-11"></ellipse>
       <a :href="tweetit" class="button">
         <g target="_blank" class="tweetit">
-          <ellipse cx="1100" cy="950" rx="165" ry="60" class="cls-12" />
+          <ellipse cx="1100" cy="950" rx="165" ry="60" class="cls-12"></ellipse>
           <text class="cls-13" transform="translate(1000 965)">Tweet it!</text>
         </g>
       </a>
 
-      <rect x="500" y="960" width="275" height="60" class="cls-16" rx="10" ry="10" />
+      <rect
+        x="500"
+        y="960"
+        width="275"
+        height="60"
+        class="cls-16"
+        rx="10"
+        ry="10"
+      ></rect>
       <g @click="goHome" class="tweetit button">
-        <rect x="500" y="950" width="275" height="60" class="cls-15" rx="10" ry="10" />
+        <rect
+          x="500"
+          y="950"
+          width="275"
+          height="60"
+          class="cls-15"
+          rx="10"
+          ry="10"
+        ></rect>
         <text class="cls-17" transform="translate(540 990)">Play Again!</text>
       </g>
     </g>
