@@ -125,16 +125,16 @@ export default {
   },
   methods: {
     awardAssignment(type) {
-      const min = 1.2,
+      const min = 1.35,
         max = 1.9;
 
       let posType = this.finalPlayerPosition[type];
-      if (posType < 1.1) {
+      if (posType < min) {
         type === "ingredient"
           ? (this.assignArr[0] = 0)
           : (this.assignArr[1] = 0);
         return `${type} purist`;
-      } else if (posType > 1.5) {
+      } else if (posType > max) {
         type === "ingredient"
           ? (this.assignArr[0] = 2)
           : (this.assignArr[1] = 2);
