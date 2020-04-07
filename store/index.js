@@ -158,4 +158,7 @@ export const mutations = {
   updateWut: (state) => {
     state.showWut = !state.showWut;
   },
+  resetSandwichIndex: (state) => {
+    state.currentSandwichIndex = 0;
+  }
 };
