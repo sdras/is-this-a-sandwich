@@ -1,3 +1,11 @@
+function wait(ms) {
+  var start = new Date().getTime();
+  var end = start;
+  while (end < start + ms) {
+    end = new Date().getTime();
+  }
+}
+
 export const state = () => ({
   playerScore: {
     ingredient: 0,
@@ -136,16 +144,9 @@ export const mutations = {
     state.playerScore.structure += score.structure;
   },
   updateCurrentSandwichIndex: (state) => {
-    if (state.currentSandwichIndex === 2) {
-      state.showWut = true;
-    }
-
     state.currentSandwichIndex += 1;
   },
-};
-
-export const actions = {
-  updateActionValue({ commit }) {
-    commit("updateValue", payload);
+  updateWut: (state) => {
+    state.showWut = !state.showWut;
   },
 };

@@ -3321,12 +3321,20 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["sandwichData", "currentSandwichIndex"]),
+    ...mapState(["sandwichData", "currentSandwichIndex", "showWut"]),
   },
   methods: {
     updateIndex() {
       if (this.currentSandwichIndex < this.sandwichData.length - 1) {
-        this.$store.commit("updateCurrentSandwichIndex");
+        if (this.currentSandwichIndex === 2 && this.showWut === false) {
+          this.$store.commit("updateWut");
+          setTimeout(function () {
+            this.$store.commit("updateCurrentSandwichIndex");
+            this.$store.commit("updateWut");
+          }, 6000);
+        } else {
+          this.$store.commit("updateCurrentSandwichIndex");
+        }
       } else {
         this.$router.push("/score");
       }

@@ -11,29 +11,28 @@ import gsap from "gsap";
 
 export default {
   mounted() {
-    gsap.fromTo(
+    const tl = gsap.timeline();
+    tl.fromTo(
       ".bouncein",
       {
-        duration: 5,
-        scale: 0,
+        duration: 2,
+        scale: 0.5,
         autoAlpha: 0,
       },
       {
         autoAlpha: 1,
         scale: 1,
         transformOrigin: "50% 50%",
-        ease: "bounce",
+        ease: "elastic.out(1, 0.5)",
       }
     );
-
-    gsap.to(".bouncein", {
-      duration: 1,
-      delay: 1,
-      scale: 0,
+    tl.to(".bouncein", {
+      duration: 0.2,
+      scale: 0.5,
       autoAlpha: 0,
       display: "none",
       transformOrigin: "50% 50%",
-      ease: "bounce.in",
+      ease: "sine.in",
     });
   },
 };
