@@ -9,7 +9,7 @@ We'll learn a lot about ourselves, each other, and sandwiches. And in the proces
 I fully do not intend to maintain this, really. Feel free to submit the most pedantic PRs in the world, just please don't expect me to spend much time reviewing them :)
 
 <p>
-  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/jlengstorf/love-and-gridsome&utm_source=learnwithjason&utm_medium=github&utm_campaign=devex">
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/sdras/is-this-a-sandwich">
     <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy this project to Netlify" />
   </a>
 </p>
