@@ -69,6 +69,13 @@ export const state = () => ({
       wut: false,
     },
     {
+      name: "pop-tart",
+      img: "pop-tart.jpg",
+      ingredient: 3,
+      structure: 2,
+      wut: true,
+    },
+    {
       name: "crepes",
       img: "crepes.jpg",
       ingredient: 3,
@@ -130,13 +137,6 @@ export const state = () => ({
       ingredient: 2,
       structure: 3,
       wut: false,
-    },
-    {
-      name: "pop-tart",
-      img: "pop-tart.jpg",
-      ingredient: 1,
-      structure: 2,
-      wut: true,
     },
   ],
 });
