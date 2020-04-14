@@ -3302,7 +3302,7 @@
         <text class="cls-175" transform="translate(1505.9 1030.2)">NO</text>
       </g>
       <text class="cls-172" transform="translate(730 130.6)">
-        Is this is a sandwich?
+        Is this a sandwich?
       </text>
       <text
         transform="translate(680 179)"
